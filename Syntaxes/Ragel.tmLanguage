@@ -7,13 +7,6 @@
 		<string>rl</string>
 		<string>ragel</string>
 	</array>
-	<key>foldingStartMarker</key>
-	<string>(?x)
-		 /\*\*(?!\*)
-		|^(?![^{]*?//|[^{]*?/\*(?!.*?\*/.*?\{)).*?\{\s*($|//|/\*(?!.*?\*/.*\S))
-	</string>
-	<key>foldingStopMarker</key>
-	<string>(?&lt;!\*)\*\*/|^\s*\}</string>
 	<key>keyEquivalent</key>
 	<string>^~R</string>
 	<key>name</key>
