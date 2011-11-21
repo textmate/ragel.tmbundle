@@ -5,20 +5,43 @@
 	<key>beforeRunningCommand</key>
 	<string>saveActiveFile</string>
 	<key>command</key>
-	<string>require_cmd ragel
-ragel "$TM_FILEPATH" -o /dev/stdout
+	<string>#!/usr/bin/env bash
+
+"${TM_RAGEL:-ragel}" "$TM_FILEPATH" -o /dev/stdout
 </string>
 	<key>input</key>
 	<string>none</string>
+	<key>inputFormat</key>
+	<string>text</string>
 	<key>keyEquivalent</key>
 	<string>^H</string>
 	<key>name</key>
 	<string>Create Source</string>
-	<key>output</key>
-	<string>openAsNewDocument</string>
+	<key>outputCaret</key>
+	<string>afterOutput</string>
+	<key>outputFormat</key>
+	<string>text</string>
+	<key>outputLocation</key>
+	<string>newWindow</string>
+	<key>requiredCommands</key>
+	<array>
+		<dict>
+			<key>command</key>
+			<string>ragel</string>
+			<key>locations</key>
+			<array>
+				<string>/opt/local/bin/ragel</string>
+				<string>/usr/local/bin/ragel</string>
+			</array>
+			<key>variable</key>
+			<string>TM_RAGEL</string>
+		</dict>
+	</array>
 	<key>scope</key>
 	<string>source.c.ragel</string>
 	<key>uuid</key>
 	<string>5475E069-12C9-4723-BF6E-15555F3B4238</string>
+	<key>version</key>
+	<integer>2</integer>
 </dict>
 </plist>
